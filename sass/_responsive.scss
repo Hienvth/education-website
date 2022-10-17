@@ -1,0 +1,175 @@
+
+// responsive on tablet
+
+@media screen and (max-width: 1024px ) {
+    .container{
+        width: $container-width-md;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 2.7rem;
+    }
+    h3 {
+        font-size: 2.2rem;
+    }
+    h4 {
+        font-size: 1.9rem;
+    }
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 2.5rem;
+        color: $white-color;
+        padding: 2rem;
+        cursor: pointer;
+        
+    }
+    button#close-menu-btn {
+        display: none;
+    }
+    
+    .nav__menu--list {
+        position: fixed;
+        top: 6rem;
+        right: 5%;
+        height: fit-content;
+        width: 30rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        li {
+            width: 100%;
+            height: 8rem;
+            animation: animateNav .6s linear forwards;
+            // transition: $trans;
+            transform-origin: top right;
+            opacity: 0;
+            &:nth-child(2) {
+                animation-delay: .1s;
+            }
+            &:nth-child(3) {
+                animation-delay: .2s;
+            }
+            &:nth-child(4) {
+                animation-delay: .3s;
+            }
+
+            @keyframes  animateNav{
+                0% {
+                    opacity: 0;
+                    transform: rotateZ(-90deg) translateX(1000px) scale(0.1);
+                }
+                100% {
+                    opacity: 1;
+                    transform: rotateZ(0) translateX(0) scale(1);
+                }
+            }
+            a {
+                background: $primary-color;
+                box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+                width: 100%;
+                height: 100%;
+                display: grid;
+                place-items: center;
+                &:hover {
+                    background-color: $bg2-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .header__container {
+        gap: 1rem;
+    }
+    .categories {
+        height: auto;
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 7rem;
+        }
+        &__left {
+            margin-right: 0;
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+        &__right {
+            grid-template-columns: repeat(2 , 1fr);
+        }
+    }
+    .courses {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+    .course:last-child {
+        display: none;
+    }
+    .footer{
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item {
+            text-align: left;
+            p {
+                padding-left: 15px;
+            }
+            & h4 {
+                padding-left: 3rem;
+            }
+            &--list-socials {
+                
+                    justify-content: left;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px ) {
+    header {
+        margin-top: 8rem;
+    }
+    .header__container {
+        grid-template-columns: 1fr;
+
+    }
+    .categories__right{
+        grid-template-columns: 1fr;
+    }
+    .courses {
+        margin-top: 5rem;
+        &__container{
+            grid-template-columns: 1fr;
+        }
+    }
+    .course:last-child {
+        display: block;
+    }
+    .faqs__container{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        &__container{
+            grid-template-columns: 1fr;
+            & > div h4 {
+                padding: 0;
+                margin-bottom: 0;
+            }
+            p {
+                padding: 0;
+            }
+        }
+        &__item {
+            text-align: center;
+            &--list-socials {
+                margin-top: 0;
+                justify-content: center;
+            }
+        }
+    }
+    
+}
