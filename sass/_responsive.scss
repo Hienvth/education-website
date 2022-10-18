@@ -127,6 +127,22 @@
             }
         }
     }
+
+    // Page About
+    .achievements__container{
+        grid-template-columns: 1fr ;
+    }
+    .achievement__left--img {
+        height: 380px;
+        object-fit: contain;
+    }
+    .achievement__right--title{
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    .team__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 600px ) {
@@ -170,6 +186,34 @@
                 justify-content: center;
             }
         }
+    }
+    // Page About
+    .achievements__container{
+        grid-template-columns: 1fr ;
+    }
+    
+    .achievement {
+        &__left--img {
+            object-fit: contain;
+        }
+        &__right{
+            &--title {
+                text-align: center;
+                font-size: 3.5rem;
+            }
+            &--box {
+                grid-template-columns: 1fr;
+                
+            }
+            &--item {
+                // align-items: c;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .team__container {
+        grid-template-columns: 1fr;
     }
     
 }
