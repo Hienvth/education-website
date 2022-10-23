@@ -67,6 +67,7 @@ p {
     font-weight: 500;
     font-size: 1.8rem;
     transition: $trans;
+    cursor: pointer;
     &:hover {
         background: transparent;
         color: $white-color;

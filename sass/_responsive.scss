@@ -143,6 +143,29 @@
     .team__container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    // contact
+    .contact {
+        &__container {
+            gap: 2rem;
+            margin-top: 3rem;
+            height: auto;
+            padding: 2rem;
+        }
+        &__aside {
+            bottom: 0;
+            width: auto;
+            padding: 1.5rem;
+        }
+        &__socials {
+            gap: 1rem;
+        }
+        &__form {
+            align-self: center;
+            gap: 1rem;
+            margin-right: 2rem;
+        }
+    }
 }
 
 @media screen and (max-width: 600px ) {
@@ -214,6 +237,46 @@
     }
     .team__container {
         grid-template-columns: 1fr;
+    }
+
+    // contact
+    .contact {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0;
+
+        }
+        &__aside {
+            h2 {
+                text-align: center;
+            }
+        
+        }
+        &__details {
+            margin-bottom: 5rem;
+            li {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 0.7rem;
+                font-size: 2rem;
+            }
+        }
+        &__form {
+            // margin: auto;
+            padding: 1.5rem;
+           
+            align-items: center;
+            &--name {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+            button {
+                margin:1rem 0 5rem;
+            }
+        }
     }
     
 }
